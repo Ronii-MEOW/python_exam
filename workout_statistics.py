@@ -1,9 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-
-
-
-
+from colorama import Fore,Style
 def count_calories(szivveres,testsuly,kor,edzeshossz,nem):
     if nem == "N":
         calories =calories = (
@@ -36,6 +33,7 @@ def show_stats(df):
     plt.show()
 
 def main():
+    print(Fore.CYAN +"---------ᕦ⁠ʕ⁠ ⁠•⁠ᴥ⁠•⁠ʔ⁠ᕤ---------", Style.RESET_ALL)
     nev = input("Név: ")
     kor = int(input("Kor: "))
     testsuly = float(input("Testsúly: "))
