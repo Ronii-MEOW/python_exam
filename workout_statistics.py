@@ -15,3 +15,9 @@ def count_calories(szivveres,testsuly,kor,edzeshossz,nem):
                     / 4.184) * edzeshossz
 
     return calories
+class Athlete:
+    def __init__(self,nev,kor,testsuly,nem):
+        self.nev = nev
+        self.kor = kor
+        self.testsuly = testsuly
+        self.nem = nem
