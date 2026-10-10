@@ -33,3 +33,10 @@ def show_stats(df):
     plt.ylabel("Kalória")
     plt.title("Kalóriaégetés")
     plt.show()
+
+def main():
+    nev = input("Név: ")
+    kor = int(input("Kor: "))
+    testsuly = float(input("Testsúly: "))
+    nem = input("Nem (N/F): ")
+    felhasznalo=Athlete(nev,kor,testsuly,nem)
