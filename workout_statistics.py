@@ -1,3 +1,9 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+
+
+
 def count_calories(szivveres,testsuly,kor,edzeshossz,nem):
     if nem == "N":
         calories =calories = (
@@ -21,3 +27,9 @@ class Athlete:
         self.kor = kor
         self.testsuly = testsuly
         self.nem = nem
+def show_stats(df):
+    plt.plot(df["Nap"],df["Kalória"])
+    plt.xlabel("Nap")
+    plt.ylabel("Kalória")
+    plt.title("Kalóriaégetés")
+    plt.show()
