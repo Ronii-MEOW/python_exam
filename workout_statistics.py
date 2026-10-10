@@ -27,6 +27,7 @@ class Athlete:
         self.kor = kor
         self.testsuly = testsuly
         self.nem = nem
+
 def show_stats(df):
     plt.plot(df["Nap"],df["Kalória"])
     plt.xlabel("Nap")
@@ -40,3 +41,10 @@ def main():
     testsuly = float(input("Testsúly: "))
     nem = input("Nem (N/F): ")
     felhasznalo=Athlete(nev,kor,testsuly,nem)
+
+    workout_df = pd.read_excel("Workout_Data.xlsx")
+    workout_df["Kalória"] = count_calories(workout_df["Szívverés(bpm)"],felhasznalo.testsuly,felhasznalo.kor,workout_df["Edzéshossz(perc)"],felhasznalo.nem)
+    print(workout_df)
+    show_stats(workout_df)
+
+main()
