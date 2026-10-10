@@ -16,7 +16,7 @@ def count_calories(szivveres,testsuly,kor,edzeshossz,nem):
 
     return calories
 class Athlete:
-    def __init__(self,nev,kor,testsuly,nem):
+    def __init__(self,nev,kor=18,testsuly = None,nem = None):
         self.nev = nev
         self.kor = kor
         self.testsuly = testsuly
